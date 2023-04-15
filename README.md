@@ -1,5 +1,5 @@
 # MicroRealms
-An Adventure/Zork like game that runs on the STM32L031.
+An Adventure/Zork like game that runs on the STM32L031. Link to video - https://youtu.be/CLCvk3EaEfw.
 
 The first thing I did was change the controls to W, S, D, A for North, South, East and West to make it easier for the user to navigate. I included ASCII art for the baddies, potions, and magic, using the eputs() function. I initialised GPIOA and made Port A bits 1,4,5,6, and 7 outputs in the runGame() function. I wanted to give each of the baddies their own colour LED that would light up when the user was in battle with them. I assigned red to the dragon, green to the ogre, yellow to the hag and blue to the troll. I turned them on in the switch statement for the baddies and they turn off when the player wins, loses or “chickens out” of the battle. The LEDs are switched on by using an OR operator to shift the bit according to the Port bit. So, for example, to turn on the red LED which was connected to Port A bit 1, bit 1 gets shifted once i.e. (1<<1).
 
